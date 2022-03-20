@@ -3,8 +3,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+  release-pr:
     runs-on: ubuntu-20.04
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -13,3 +15,14 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
+      - run: npm run bump
+      - id: pr_desc
+        run: |
+          version=$(npx -c 'echo $npm_package_version')
+          branch=$(git branch --show-current)
+          pr_title="Release v${version}"
+          echo "::set-output name=branch::$branch"
+          echo "::set-output name=pr_title::$pr_title"
+      - run: git push origin ${{ steps.pr_desc.outputs.branch }}
+      - run: gh pr create -B ${{ steps.pr_desc.outputs.branch }} -t ${{ steps.pr_desc.outputs.pr_title }} -b ""
+
