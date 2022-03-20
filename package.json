@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "bump": "conventional-recommended-bump -p angular | xargs npm version",
+    "bump": "conventional-recommended-bump -p angular | xargs npm version --no-commit-hooks --no-git-tag-version",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md package.json package-lock.json"
   },
   "keywords": [],
