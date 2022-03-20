@@ -14,6 +14,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+      - run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
       - run: npm ci
       - run: npm run bump
       - id: pr_desc
@@ -24,5 +27,5 @@ jobs:
           echo "::set-output name=branch::$branch"
           echo "::set-output name=pr_title::$pr_title"
       - run: git push origin ${{ steps.pr_desc.outputs.branch }}
-      - run: gh pr create -B ${{ steps.pr_desc.outputs.branch }} -t ${{ steps.pr_desc.outputs.pr_title }} -b ""
+      - run: gh pr create -B main -t "${{ steps.pr_desc.outputs.pr_title }}" -b ""
 
