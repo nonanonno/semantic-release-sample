@@ -15,18 +15,7 @@
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "husky": "^7.0.4",
-    "semantic-release": "^19.0.2",
     "typescript": "^4.6.2"
-  },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/github"
-    ],
-    "branches": [
-      "main"
-    ]
   },
   "commitlint": {
     "extends": [
