@@ -1,12 +1,14 @@
 {
   "name": "semantic-release-sample",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "version": "conventional-recommended-bump -p angular | xargs npm version",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "bump": "npm version && npm run changelog"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +16,13 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
+    "@types/conventional-changelog": "^3.1.1",
+    "@types/conventional-recommended-bump": "^6.1.0",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2",
     "conventional-recommended-bump": "^6.1.0",
     "husky": "^7.0.4",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },
   "commitlint": {
