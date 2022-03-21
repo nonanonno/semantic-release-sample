@@ -1,3 +1,12 @@
+## [1.4.6](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.5...v1.4.6) (2022-03-21)
+
+
+### Bug Fixes
+
+* add version to bump ([125b02c](https://github.com/nonanonno/semantic-release-sample/commit/125b02c3b1c156d1fe2454172e5df8355816ac38))
+
+
+
 ## [1.4.5](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.4...v1.4.5) (2022-03-21)
 
 
