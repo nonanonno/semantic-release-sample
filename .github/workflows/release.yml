@@ -16,7 +16,7 @@ jobs:
         run: echo ${{ github.sha }} > Release.txt
       - name: Parse latest changelog
         run: |
-          cat CHANGELOG | node script/changelog.js | tee CHANGELOG-latest.md
+          cat CHANGELOG.md | node script/changelog.js > CHANGELOG-latest.md
       - name: Check
         run: |
           cat Release.txt
