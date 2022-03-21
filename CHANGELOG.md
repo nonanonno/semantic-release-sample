@@ -1,3 +1,12 @@
+## [1.4.2](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.1...v1.4.2) (2022-03-21)
+
+
+### Bug Fixes
+
+* ssh-key ([ee45ae3](https://github.com/nonanonno/semantic-release-sample/commit/ee45ae3ea8d1007a1dfa88dd609650a1e58826e9))
+
+
+
 ## [1.4.1](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.0...v1.4.1) (2022-03-21)
 
 
