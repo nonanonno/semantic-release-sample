@@ -24,10 +24,6 @@ jobs:
       - name: Parse latest changelog
         run: |
           cat CHANGELOG.md | node script/changelog.js > CHANGELOG-latest.md
-      - name: Check
-        run: |
-          cat Release.txt
-          cat CHANGELOG-latest.md
       - uses: actions/upload-artifact@v3
         with:
           name: release

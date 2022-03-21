@@ -38,18 +38,35 @@ Since the project employs [semantic versioning](https://semver.org/) and automat
 
 ```mermaid
 flowchart LR
-	Trigger[Trigger release]
-	PR(Make release branch and PR\n*auto*)
-	Check[Check PR]
-	Merge[Merge]
-	Cancel[Cancel]
-	Tag(Tag\n*auto*)
-	Release(Release\n*auto*)
+	subgraph flow
+		direction LR
 
-	Trigger --> PR --> Check
-	Check -->|OK| Merge
-	Check -->|NG| Cancel
-	Merge --> Tag --> Release
+		Trigger(Trigger)
+
+		subgraph ReleasePR[create_release_pr.yml]
+			direction TB
+			Branch[Create release branch]
+			Changelog[Create CHANGELOG]
+			Bump[Bump up]
+			PR[Make PR]
+			Branch --> Changelog --> Bump --> PR
+		end
+
+		
+		Check{Check PR}
+		AutoTag[Tag\ntag.yml]
+		ManualTag(Tag\nmanual)
+		ManualRelease(Trigger\nwith tag)
+		Release[release.yml]
+		Check -->|Fix release PR| Check
+
+		Trigger --> ReleasePR --> Check
+		Check -->|OK| AutoTag 
+		AutoTag --> Release
+		ManualTag --> Release
+		ManualRelease --> Release
+		Check -->|NG| Close
+	end
 ```
 
 The release procedure is automated as the follows. Ths things user need to do is **bold** process.
