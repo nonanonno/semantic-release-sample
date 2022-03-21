@@ -21,7 +21,7 @@ jobs:
         run: |
           cat Release.txt
           cat CHANGELOG-latest.md
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v3
         with:
           name: release
           path: |
