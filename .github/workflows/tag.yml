@@ -7,22 +7,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  auto-tag:
+  tag:
     runs-on: ubuntu-20.04
-    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release')
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: main
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: npx semantic-release --no-ci
-  manual-tag:
-    runs-on: ubuntu-20.04
-    if: github.event.workflow_dispatch == true
+    if: |
+      (github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release'))
+      || (github.event_name == 'workflow_dispatch')
     steps:
       - uses: actions/checkout@v2
         with:
