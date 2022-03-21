@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
           ref: main
+          ssh-key: "${{ secrets.COMMIT_KEY }}"
       - id: tag_desc
         run: |
           ref=${{ github.event.pull_request.head.ref }}
@@ -27,4 +27,3 @@ jobs:
           git push origin $TAG
         env:
           TAG: ${{ steps.tag_desc.outputs.tag }}
-          GITHUB_TOKEN: ${{ secrets.ALTER_TOKEN }}
