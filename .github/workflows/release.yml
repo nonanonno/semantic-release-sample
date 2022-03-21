@@ -21,7 +21,7 @@ jobs:
         id: changelog
         with:
           script: |
-            const script = require('./parse.js')
+            const script = require('./.github/workflows/parse.js')
             return script(`${CHANGELOG}`)
           result-encoding: string
       - name: Make latest changelog
