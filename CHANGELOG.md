@@ -1,3 +1,7 @@
+## [1.4.7](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.6...v1.4.7) (2022-03-21)
+
+
+
 ## [1.4.6](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.5...v1.4.6) (2022-03-21)
 
 
