@@ -17,7 +17,7 @@ jobs:
       - name: Parse latest changelog
         uses: actions/github-script@v6
         env:
-          CHANGELOG=${{ steps.changelog_all.outputs.changelog }}
+          CHANGELOG="${{ steps.changelog_all.outputs.changelog }}"
         id: changelog
         with:
           scrpt: |
