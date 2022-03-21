@@ -34,18 +34,6 @@ jobs:
           path: |
             Release.txt
             CHANGELOG-latest.md
-  
-  ckeck-values:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
-          echo name: ${{ github.event_name}}
-          echo ref : ${{ github.ref }}
-          echo en  : ${{ github.event.inputs.enableGithub }}
-          echo check name: ${{ github.event_name == 'workflow_dispatch'}}
-          echo check ref : ${{ startsWith(github.ref, 'refs/tags/') }}
-          echo check en  : ${{ github.event.inputs.enableGithub == 'true' }}
 
   publish-github:
     runs-on: ubuntu-20.04
