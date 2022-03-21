@@ -1,3 +1,16 @@
+## [1.4.3](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.2...v1.4.3) (2022-03-21)
+
+
+### Bug Fixes
+
+* add condition ([4dd4a12](https://github.com/nonanonno/semantic-release-sample/commit/4dd4a12394d3ca11cc1684d5024322cfb20ce687))
+* add switch in release ([50d844e](https://github.com/nonanonno/semantic-release-sample/commit/50d844e0e0d16259f3563e3db23873688798c488))
+* remove gpg ([f6bfbb6](https://github.com/nonanonno/semantic-release-sample/commit/f6bfbb6812cf38fe0c75bd8678c622f328203937))
+* sign in trigger ([6491525](https://github.com/nonanonno/semantic-release-sample/commit/6491525ee0447b2a1a27a3f00f3a29589a5f517a))
+* typo ([76c09fd](https://github.com/nonanonno/semantic-release-sample/commit/76c09fd6e36a7bfb426d2ea7916c9a22c9bdce79))
+
+
+
 ## [1.4.2](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.1...v1.4.2) (2022-03-21)
 
 
