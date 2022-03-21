@@ -30,7 +30,7 @@ jobs:
           echo "::set-output name=pr_title::$pr_title"
       - run: |
           git checkout -B ${{ steps.pr_desc.outputs.branch }}
-          git commit- S -m "chore: bump ${{ steps.pr_desc.outputs.version }}"
+          git commit -S -m "chore: bump ${{ steps.pr_desc.outputs.version }}"
           git push origin ${{ steps.pr_desc.outputs.branch }}
       - run: gh pr create -B main -t "${{ steps.pr_desc.outputs.pr_title }}" -b "" -l release
 
