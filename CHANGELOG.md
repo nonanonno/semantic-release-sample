@@ -1,3 +1,15 @@
+## [1.2.1](https://github.com/nonanonno/semantic-release-sample/compare/v1.2.0...v1.2.1) (2022-03-21)
+
+
+### Bug Fixes
+
+* add tag.yml name ([43a2b72](https://github.com/nonanonno/semantic-release-sample/commit/43a2b727b0263ef2079ef41604eb1f58b5f2256b))
+* add tagging ([5f48017](https://github.com/nonanonno/semantic-release-sample/commit/5f4801746f55d71fd08ed7e26cbf74b53aaffb20))
+* hoge ([3207bef](https://github.com/nonanonno/semantic-release-sample/commit/3207beffdad3d1dc7bafc79f56a46ef15ee8cede))
+* typo ([699f497](https://github.com/nonanonno/semantic-release-sample/commit/699f497e1a9c2ad40982ba2ba535219b9d7e1887))
+
+
+
 # [1.2.0](https://github.com/nonanonno/semantic-release-sample/compare/v1.1.0...v1.2.0) (2022-03-20)
 
 
