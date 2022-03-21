@@ -40,7 +40,7 @@ jobs:
     needs: [create-artifact]
     if: |
       github.event_name == 'push' || 
-      (github.event_name == 'workflow_dispatch' && github.event.inputs.enableGithub == true)
+      (github.event_name == 'workflow_dispatch' && startsWith(github.ref, 'refs/tags/') && github.event.inputs.enableGithub == true)
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v3
