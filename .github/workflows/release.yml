@@ -1,0 +1,44 @@
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
+jobs:
+  artifact:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: echo ${{ github.sha }} > Release.txt
+      - name: Grab all changelog
+        run: echo "::set-output name=changelog::$(cat CHANGELOG.md)"
+        id: changelog_all
+      - name: Parse latest changelog
+        uses: actions/github-script@v6
+        env:
+          CHANGELOG=${{ steps.changelog_all.outputs.changelog }}
+        id: changelog
+        with:
+          scrpt: |
+            const script = require('./parse.js')
+            return script(`${CHANGELOG}`)
+          result-encoding: string
+      - name: Make latest changelog
+        env:
+          CHANGELOG=${{ steps.changelog.outputs.result }}
+        run: |
+          echo "$CHANGELOG" > CHANGELOG-latest.md
+      - name: Check
+        run: |
+          cat Release.txt
+          cat CHANGELOG-latest.md
+      - uses: actions/upload-artifact@v1
+        with:
+          name: release
+          path: |
+            Release.txt
+            CHANGELOG-latest.md
+
+      
+
