@@ -27,3 +27,4 @@ jobs:
           git push origin $TAG
         env:
           TAG: ${{ steps.tag_desc.outputs.tag }}
+          GITHUB_TOKEN: ${{ secrets.ALTER_TOKEN }}
