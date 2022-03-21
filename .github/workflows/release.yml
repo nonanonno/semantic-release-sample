@@ -3,6 +3,13 @@ on:
     tags:
       - "v*.*.*"
   workflow_dispatch:
+    inputs:
+      enableGithub:
+        description: 'Publish on Github release'
+        required: true
+        type: boolean
+        default: false
+      
 
 jobs:
   create-artifact:
@@ -31,6 +38,9 @@ jobs:
   publish-github:
     runs-on: ubuntu-20.04
     needs: [create-artifact]
+    if: |
+      github.event_name == 'push' || 
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.enableGithub == true)
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v3
