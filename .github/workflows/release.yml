@@ -9,27 +9,14 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
       - name: Build
         run: echo ${{ github.sha }} > Release.txt
-      - name: Grab all changelog
-        run: echo "::set-output name=changelog::$(cat CHANGELOG.md)"
-        id: changelog_all
       - name: Parse latest changelog
-        uses: actions/github-script@v6
-        env:
-          CHANGELOG: "${{ steps.changelog_all.outputs.changelog }}"
-        id: changelog
-        with:
-          script: |
-            const {CHANGELOG} = process.env;
-            const script = require('./.github/workflows/parse.js')
-            return script(CHANGELOG)
-          result-encoding: string
-      - name: Make latest changelog
-        env:
-          CHANGELOG: "${{ steps.changelog.outputs.result }}"
         run: |
-          echo "$CHANGELOG" > CHANGELOG-latest.md
+          cat CHANGELOG | node script/changelog.js | tee CHANGELOG-latest.md
       - name: Check
         run: |
           cat Release.txt
