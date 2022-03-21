@@ -1,3 +1,12 @@
+## [1.4.1](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.0...v1.4.1) (2022-03-21)
+
+
+### Bug Fixes
+
+* alter token ([6d0da9d](https://github.com/nonanonno/semantic-release-sample/commit/6d0da9d4cf8b12c1a14f990221120107cb1b2e74))
+
+
+
 # [1.4.0](https://github.com/nonanonno/semantic-release-sample/compare/v1.3.0...v1.4.0) (2022-03-21)
 
 
