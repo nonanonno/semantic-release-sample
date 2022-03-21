@@ -26,6 +26,7 @@ jobs:
           pr_title="Release $version"
           echo "::set-output name=branch::$branch"
           echo "::set-output name=pr_title::$pr_title"
+          echo "::set-output name=version::$version"
       - run: |
           git checkout -B ${{ steps.pr_desc.outputs.branch }}
           git commit -m "chore: bump ${{ steps.pr_desc.outputs.version }}"
