@@ -17,7 +17,7 @@ jobs:
       - name: Parse latest changelog
         uses: actions/github-script@v6
         env:
-          CHANGELOG="${{ steps.changelog_all.outputs.changelog }}"
+          CHANGELOG: ${{ steps.changelog_all.outputs.changelog }}
         id: changelog
         with:
           scrpt: |
@@ -26,7 +26,7 @@ jobs:
           result-encoding: string
       - name: Make latest changelog
         env:
-          CHANGELOG=${{ steps.changelog.outputs.result }}
+          CHANGELOG: ${{ steps.changelog.outputs.result }}
         run: |
           echo "$CHANGELOG" > CHANGELOG-latest.md
       - name: Check
