@@ -17,8 +17,6 @@ jobs:
       - run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          echo $GH_TOKEN
-          git config --local user.signingkey $GH_TOKEN
       - run: npm ci
       - run: npm run bump
       - id: pr_desc
@@ -30,7 +28,7 @@ jobs:
           echo "::set-output name=pr_title::$pr_title"
       - run: |
           git checkout -B ${{ steps.pr_desc.outputs.branch }}
-          git commit -S -m "chore: bump ${{ steps.pr_desc.outputs.version }}"
+          git commit -m "chore: bump ${{ steps.pr_desc.outputs.version }}"
           git push origin ${{ steps.pr_desc.outputs.branch }}
       - run: gh pr create -B main -t "${{ steps.pr_desc.outputs.pr_title }}" -b "" -l release
 
