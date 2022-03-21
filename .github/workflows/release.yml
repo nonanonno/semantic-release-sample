@@ -9,7 +9,6 @@ on:
         description: 'Publish on Github release'
         required: true
         type: boolean
-        default: false
       
 
 jobs:
