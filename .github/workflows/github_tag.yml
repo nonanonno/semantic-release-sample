@@ -1,0 +1,29 @@
+name: Github Tag
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:
+  tag:
+    runs-on: ubuntu-20.04
+    if: |
+      github.event.pull_request.merged == true &&
+      contains(github.event.pull_request.labels.*.name, 'release')
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+      - id: tag_desc
+        run: |
+          ref=${{ github.event.pull_request.head.ref }}
+          tag=`echo "$ref" | sed 's/release\///'`
+          echo "::set-output name=tag::$tag"
+      - run: |
+          git tag $TAG
+          git push origin $TAG
+        env:
+          TAG: ${{ steps.tag_desc.outputs.tag }}
