@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/nonanonno/semantic-release-sample/compare/v1.2.1...v1.3.0) (2022-03-21)
+
+
+### Features
+
+* add semantic-release ([ec336f2](https://github.com/nonanonno/semantic-release-sample/commit/ec336f246b283f8403b8db0ad6869e281c1e05d4))
+
+
+
 ## [1.2.1](https://github.com/nonanonno/semantic-release-sample/compare/v1.2.0...v1.2.1) (2022-03-21)
 
 
