@@ -1,3 +1,12 @@
+## [1.4.5](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.4...v1.4.5) (2022-03-21)
+
+
+### Bug Fixes
+
+* documents and names ([aeb395c](https://github.com/nonanonno/semantic-release-sample/commit/aeb395c08eae3d0d6d120642be33517bd876563a))
+
+
+
 ## [1.4.4](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.3...v1.4.4) (2022-03-21)
 
 
