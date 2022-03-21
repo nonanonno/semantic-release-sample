@@ -23,7 +23,7 @@ jobs:
           script: |
             const {CHANGELOG} = process.env;
             const script = require('./.github/workflows/parse.js')
-            return script(CHANGELOG})
+            return script(CHANGELOG)
           result-encoding: string
       - name: Make latest changelog
         env:
