@@ -1,4 +1,4 @@
-const parse = ({ text }) => {
+const parse = (text) => {
 	let result = "";
 	let count = 0;
 	for (const line of text.split("\n")) {
