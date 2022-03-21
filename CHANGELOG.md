@@ -1,3 +1,29 @@
+# [1.4.0](https://github.com/nonanonno/semantic-release-sample/compare/v1.3.0...v1.4.0) (2022-03-21)
+
+
+### Bug Fixes
+
+* env ([81857a3](https://github.com/nonanonno/semantic-release-sample/commit/81857a3b4f0c342647f7b2ac2309306d5c159f10))
+* rename ([c7d0b1b](https://github.com/nonanonno/semantic-release-sample/commit/c7d0b1b4c9ffdb688a9dfba090d2897247655b0e))
+* separate script ([010af23](https://github.com/nonanonno/semantic-release-sample/commit/010af233304ba12accabc44d949b2877d143a259))
+* typo ([bfbea1b](https://github.com/nonanonno/semantic-release-sample/commit/bfbea1b59419b317c39ecf3f95540eb9db30d0d3))
+* typo ([8facdfd](https://github.com/nonanonno/semantic-release-sample/commit/8facdfd9c9d1f16b5ce19313907ce05c4451687b))
+* typo ([9351c83](https://github.com/nonanonno/semantic-release-sample/commit/9351c83118fd58fd28542ddd6ac7f0f1b7d3f2d8))
+* typo ([e805228](https://github.com/nonanonno/semantic-release-sample/commit/e80522866d925c5d3c8b37c911b35b63fd0d47b7))
+* typo ([851f267](https://github.com/nonanonno/semantic-release-sample/commit/851f26701705eb5e1ca061db3f32dedd27e7175f))
+* typo ([f055f71](https://github.com/nonanonno/semantic-release-sample/commit/f055f71da796c2ff0d8e858a1a1cbe18d82c6e31))
+* typo ([25b1a9e](https://github.com/nonanonno/semantic-release-sample/commit/25b1a9efb852747190c43f60bb2a74125c3f313e))
+* upload version ([01b502e](https://github.com/nonanonno/semantic-release-sample/commit/01b502efa0bd54af68c0b0faf91ce569737f7bcb))
+
+
+### Features
+
+* add publish on github ([0f29194](https://github.com/nonanonno/semantic-release-sample/commit/0f291944705364eb62ab367a984e9c08892f72d5))
+* add release ([abd0397](https://github.com/nonanonno/semantic-release-sample/commit/abd0397b073e755b69ff8d7cea0de2a0d7845a75))
+* rm hoge ([06e24a2](https://github.com/nonanonno/semantic-release-sample/commit/06e24a24f7aca5d786e37f0dd16f34755572ddb8))
+
+
+
 # [1.3.0](https://github.com/nonanonno/semantic-release-sample/compare/v1.2.1...v1.3.0) (2022-03-21)
 
 
