@@ -20,7 +20,7 @@ jobs:
           CHANGELOG: ${{ steps.changelog_all.outputs.changelog }}
         id: changelog
         with:
-          scrpt: |
+          script: |
             const script = require('./parse.js')
             return script(`${CHANGELOG}`)
           result-encoding: string
