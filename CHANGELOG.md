@@ -1,3 +1,17 @@
+## [1.4.4](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.3...v1.4.4) (2022-03-21)
+
+
+### Bug Fixes
+
+* boolean ([27f3732](https://github.com/nonanonno/semantic-release-sample/commit/27f37326ac7f8977fea5e0063c8d1c05a1ab236a))
+* check values ([35a1770](https://github.com/nonanonno/semantic-release-sample/commit/35a17700f52848a1dc8b014bdeb3c08b5e521da5))
+* name ([722eb1f](https://github.com/nonanonno/semantic-release-sample/commit/722eb1fb55cad904631ec0dd2cec290913244874))
+* remove ([a71cee4](https://github.com/nonanonno/semantic-release-sample/commit/a71cee4816554ad8d75b61dfb2258f9dbcac30fa))
+* remove default ([dc4c7a4](https://github.com/nonanonno/semantic-release-sample/commit/dc4c7a4601e6c71627c1818ac5350caa46421e2a))
+* reorder ([d6120ba](https://github.com/nonanonno/semantic-release-sample/commit/d6120bab8fce94b9da293f34ed4f1671ce6edb21))
+
+
+
 ## [1.4.3](https://github.com/nonanonno/semantic-release-sample/compare/v1.4.2...v1.4.3) (2022-03-21)
 
 
